@@ -1,0 +1,610 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5faff;
+}
+
+/* Header Styles */
+header {
+    background-color: #e3f2fd;
+    padding: 15px 10%;
+    border-bottom: 2px solid #90caf9;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo img {
+    width: 130px;
+}
+
+.social-icons img {
+    width: 28px;
+    margin-right: 10px;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #1565c0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #42a5f5;
+}
+
+.search-bar {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 8px;
+    border: 1px solid #90caf9;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+}
+
+.search-bar button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #1565c0;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.search-bar button:hover {
+    background-color: #42a5f5;
+}
+
+.user-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-pic {
+    width: 45px;
+    border-radius: 50%;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-arrow {
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #90caf9;
+    border-radius: 5px;
+    min-width: 180px;
+    z-index: 1000;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #1565c0;
+    font-size: 1rem;
+}
+
+.dropdown-content a:hover {
+    background-color: #e3f2fd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.login-btn {
+    background-color: #1565c0;
+    color: white;
+    padding: 8px 18px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background-color: #42a5f5;
+}
+
+/* Welcome Section */
+.welcome-section {
+    text-align: center;
+    padding: 50px 10%;
+    background: linear-gradient(to right, #42a5f5, #90caf9);
+    color: white;
+    animation: scroll-effect 5s linear infinite alternate;
+}
+
+.welcome-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+@keyframes scroll-effect {
+    from {
+        transform: translateY(-10px);
+    }
+    to {
+        transform: translateY(10px);
+    }
+}
+
+/* About Section */
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.about-content {
+    max-width: 600px;
+    text-align: justify;
+    font-size: 1.2rem;
+}
+
+.about-image {
+    width: 300px;
+    border-radius: 10px;
+}
+
+/* Education Section */
+.education-section {
+    text-align: center;
+    padding: 50px 5%;
+    background-color: #f7fafc;
+    color: #333;
+}
+
+.education-section h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #6084ca;
+}
+
+.education-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #4a5568;
+}
+
+.grade-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.grade-box {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.grade-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Entrance Exams Section */
+.entrance-exams-section {
+    text-align: center;
+    padding: 50px 5%;
+    background-color: #f7fafc;
+    color: #333;
+    border: 2px solid #90caf9;
+    border-radius: 10px;
+    margin: 40px 0;
+}
+
+.entrance-exams-section h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #6084ca;
+}
+
+.entrance-exams-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #4a5568;
+}
+
+.entrance-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.exam-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    width: 250px;
+    padding: 20px;
+    background-color: #f1f8ff;
+    border: 1px solid #90caf9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.exam-container h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #1565c0;
+    text-align: center;
+}
+
+.exam-box {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.exam-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .right-section {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .search-bar input {
+        width: 100%;
+    }
+
+    .grade-box,
+    .exam-box {
+        width: 100px;
+        height: 100px;
+        font-size: 1rem;
+    }
+} 
+
+
+/* Exam Container */
+.exam-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 250px;
+    padding: 20px;
+    background-color: #f1f8ff;
+    border: 1px solid #90caf9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative; /* Keep the container relative */
+  }
+  
+  /* Exam Box */
+  .exam-box {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    position: relative; /* Important for positioning sub-options */
+    z-index: 1;
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+  }
+  
+  /* Reduce opacity of Math option on hover */
+  .exam-box:hover {
+    opacity: 0.5; /* Reduce opacity of Math box */
+  }
+  
+  /* Sub-options Container */
+  .sub-options {
+    display: flex;
+    gap: 10px;
+    position: absolute; /* Position absolutely relative to .exam-box */
+    top: 0; /* Start from the top of the Math option */
+    left: 0; /* Align to the left of the Math option */
+    width: 100%; /* Ensure it takes the same width as Math option */
+    height: 100%; /* Ensure it occupies the same height as Math */
+    justify-content: center; /* Center the options horizontally */
+    align-items: center; /* Center the options vertically */
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Make it invisible initially */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
+    z-index: 2; /* Ensure sub-options are above Math */
+  }
+  
+  
+
+  /* Programming Languages Section */
+.programming-languages-section {
+    text-align: center;
+    padding: 50px 5%;
+    background-color: #f7fafc;
+    color: #333;
+    margin: 40px 0;
+    border: 2px solid #90caf9;
+    border-radius: 10px;
+}
+
+.programming-languages-section h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #6084ca;
+}
+
+.programming-languages-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #4a5568;
+}
+
+.language-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.language-box {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.language-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Adjustments for Programming Languages Section */
+@media (max-width: 768px) {
+    .language-box {
+        width: 100px;
+        height: 100px;
+        font-size: 1rem;
+    }
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #f7f7f7;
+    padding: 50px 5%;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.about-us, .get-in-touch {
+    flex: 1 1 300px;
+    padding: 20px;
+}
+
+.about-us h2, .get-in-touch h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #90caf9;
+}
+
+.about-us p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #e0e0e0;
+}
+
+.get-in-touch ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.get-in-touch li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #d6d6d6;
+}
+
+.get-in-touch li a {
+    color: #90caf9;
+    text-decoration: none;
+}
+
+.get-in-touch li a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Form */
+.contact-form {
+    background-color: #444;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #f7f7f7;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #cfcfcf;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 1rem;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #90caf9;
+    box-shadow: 0 0 4px rgba(144, 202, 249, 0.8);
+}
+
+button[type="submit"] {
+    background-color: #90caf9;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #6084ca;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-us, .get-in-touch {
+        text-align: center;
+    }
+}
+
+/* Social Media Icons */
+.socials {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.social-icon {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #90caf9;
+    transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #6084ca;
+    transform: scale(1.2);
+}
+
+.fab {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}

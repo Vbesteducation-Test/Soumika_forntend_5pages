@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subject Selection - VBest Education</title>
+    <link rel="stylesheet" href="styles3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Header from index.html -->
+    <header>
+        <div class="header-container">
+            <div class="left-section">
+                <div class="logo">
+                    <img src="logo.png" alt="VBest Logo">
+                </div>
+                <div class="social-icons">
+                    <a href="https://instagram.com/vbest" target="_blank"><img src="instagram-icon.png" alt="Instagram"></a>
+                    <a href="https://facebook.com/vbest" target="_blank"><img src="facebook-icon.png" alt="Facebook"></a>
+                </div>
+            </div>
+            <div class="right-section">
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">EAMCET</a></li>
+                        <li><a href="#">ECET</a></li>
+                        <li><a href="#">More</a></li>
+                    </ul>
+                </nav>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                    <button>🔍</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="selection-container">
+            <h2>Selected Exam: <span id="exam-name"></span></h2>
+            <h3>Subject: <span id="subject-name"></span></h3>
+
+            <!-- Grade Selection Form -->
+            <form>
+                <label for="grade-selector">Grade:</label>
+                <select id="grade-selector" class="grade-selector">
+                    <option value="11">Grade 11</option>
+                    <option value="12">Grade 12</option>
+                </select>
+
+                <div class="buttons">
+                    <button type="button" class="submit" onclick="submitSelection()">Submit</button>
+                    <button type="button" class="clear" onclick="clearSelection()">Clear</button>
+                </div>
+            </form>
+
+            <div id="summary-container">
+                <h3>Summary of Selected Chapters:</h3>
+                <div id="chapter-summary"></div>
+
+                <div class="image-section">
+                    <img src="image1.jpg" alt="Chapter Image 1">
+                    <span class="arrow">→</span>
+                    <img src="image2.jpg" alt="Chapter Image 2">
+                </div>
+
+                <div class="social-icons">
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-share-alt"></i>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function getQueryParams() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return {
+                exam: urlParams.get('exam'),
+                subject: urlParams.get('subject')
+            };
+        }
+
+        function updatePageContent() {
+            const { exam, subject } = getQueryParams();
+            document.getElementById('exam-name').innerText = exam;
+            document.getElementById('subject-name').innerText = subject;
+        }
+
+    
+        function clearSelection() {
+            // Handle form clearing
+            alert("Selection Cleared!");
+        }
+
+        updatePageContent();
+    </script>
+
+    <footer>
+        <div class="footer-container">
+            <div class="about-us">
+                <h2>About Us</h2>
+                <p>VBest is committed to providing the best resources and support for students to excel in their educational journey. We strive to make learning accessible, engaging, and effective.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

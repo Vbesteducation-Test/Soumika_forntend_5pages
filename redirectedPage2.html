@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Selection - VBest Education</title>
+    <link rel="stylesheet" href="styles2.css"> <!-- New CSS for redirected page -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Header from index.html -->
+    <header>
+        <div class="header-container">
+            <div class="left-section">
+                <div class="logo">
+                    <img src="logo.png" alt="VBest Logo">
+                </div>
+                <div class="social-icons">
+                    <a href="https://instagram.com/vbest" target="_blank"><img src="instagram-icon.png" alt="Instagram"></a>
+                    <a href="https://facebook.com/vbest" target="_blank"><img src="facebook-icon.png" alt="Facebook"></a>
+                </div>
+            </div>
+            <div class="right-section">
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">EAMCET</a></li>
+                        <li><a href="#">ECET</a></li>
+                        <li><a href="#">More</a></li>
+                    </ul>
+                </nav>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                    <button>🔍</button>
+                </div>
+                <div class="user-section">
+                    <div class="user-logged-in">
+                        <img src="user-pic.png" alt="User Picture" class="user-pic">
+                        <div class="dropdown">
+                            <span class="dropdown-arrow">⬇</span>
+                            <div class="dropdown-content">
+                                <a href="#">Profile</a>
+                                <a href="#">My Subscriptions</a>
+                                <a href="#">My Account</a>
+                                <a href="#">Log Out</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-not-logged-in">
+                        <button class="login-btn" onclick="redirectToLogin()">Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="selection-container">
+            <!-- Selection Form -->
+            <label for="class-selector">Class:</label>
+            <select id="class-selector" class="class-selector"></select>
+
+            <label for="subject-selector">Subject:</label>
+            <select id="subject-selector" class="subject-selector">
+                <option value="">Select Subject</option>
+            </select>
+
+            <label for="chapter-selector">Chapter:</label>
+            <select id="chapter-selector" class="chapter-selector">
+                <option value="">Select Chapter</option>
+            </select>
+
+            <div class="buttons">
+                <button class="submit" onclick="displaySummary()">Submit</button>
+                <button class="clear" onclick="clearSelection()">Clear</button>
+            </div>
+
+            <div class="summary" id="summary" style="display:none;">
+                <p><strong>Class:</strong> <span id="class-summary"></span></p>
+                <p><strong>Subject:</strong> <span id="subject-summary"></span></p>
+                <p><strong>Chapter:</strong> <span id="chapter-summary"></span></p>
+            </div>
+        </div>
+
+            <!-- Image Carousel -->
+            <div class="image-container" id="image-container">
+                <button class="prev" onclick="prevImage()">&#10094;</button>
+                <img class="image-slide" src="image1.jpg" alt="image1" id="carousel-img">
+                <button class="next" onclick="nextImage()">&#10095;</button>
+            </div>
+
+            <!-- Like Heart Button -->
+            <button class="heart-button" onclick="toggleHeart(this)">
+                <span class="heart">&#9825;</span>
+            </button>
+            <!-- Share Option -->
+            <button class="share-button" onclick="sharePage()">
+                <i class="fas fa-share-alt"></i> Share
+            </button>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Footer from index.html -->
+        <div class="footer-container">
+            <div class="about-us">
+                <h2>About Us</h2>
+                <p>VBest is committed to providing the best resources and support for students to excel in their educational journey. We strive to make learning accessible, engaging, and effective.</p>
+            </div>
+        
+            <div class="get-in-touch">
+                <h2>Get in Touch</h2>
+                <ul class="socials">
+                    <li>Email: <a href="mailto:contact@vbest.com">contact@vbest.com</a></li>
+                    <li>
+                        <a href="https://instagram.com/vbest_official" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://facebook.com/vbestofficial" target="_blank" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src = "script2.js"></script>
+    
+</body>
+</html>
